@@ -17,7 +17,6 @@ export function getPostBySlug(slug: string) {
 
   // const...
   let { data, content } = matter(fileContents);
-
   let itemString = JSON.stringify(data);
   itemString = itemString.replaceAll(/\$\{basePath\}/gi, nextConfig.basePath );
   data = JSON.parse(itemString);

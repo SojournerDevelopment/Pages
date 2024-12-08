@@ -1,5 +1,6 @@
 "use client";
 import React, {useImperativeHandle, useState, forwardRef, useEffect} from 'react';
+import nextConfig from "../../../next.config";
 
 interface OperatorPosition {
     id: number;
@@ -226,7 +227,7 @@ const SvgPlan = forwardRef<SvgPlanRef, SvgPlanProps>(({ hideUnused }, ref) => {
         >
             {/* Background image */}
             <image
-                href="/assets/tools/planner_map.jpg" // Replace with your image URL
+                href={nextConfig.basePath+"/assets/tools/planner_map.jpg"} // Replace with your image URL
                 width="1300"
                 height="900"
             />
